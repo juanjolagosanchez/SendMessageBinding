@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SendMessage</string>
+    <string name="etMessageText" />
+    <string name="etMessageHint">Escribe Un mensaje...</string>
+    <string name="btSend">Enviar</string>
+    <string name="etUserHint">Introduce tu nombre</string>
+    <string name="tvUserHint">El usuario</string>
+    <string name="tvMessageHint"></string>
+    <string name="tvMessageText" >Ha escrito el mensaje</string>
+    <string name="tvMessageHintText"></string>
+    <string name="tvMessageTextText" />
+    <string name="tvMessageHintFinal" />
+    <string name="tvMessageTextFinal" />
+    <string name="imgMessage">Imagen contiene dos mensajes</string>
+    <string name="aboutUs">Sobre nosotros</string>
+
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="message"
+            type="com.example.sendmessageBinding.data.Message" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ViewMessageActivity">
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tvUserMarginTop"
+            android:autofillHints=""
+            android:hint="@string/tvUserHint"
+            android:minHeight="@dimen/tvUserMinHeight"
+            android:textColorHint="@color/tvUserColorHint" />
+
+        <TextView
+            android:id="@+id/tvUserContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tvMessageMarginTop"
+            android:autofillHints=""
+            android:hint="@string/tvMessageHint"
+            android:minHeight="@dimen/tvMessageMinHeight"
+            android:text="@{message.user.name}"
+            android:textColorHint="@color/tvMessageColorHint"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <TextView
+            android:id="@+id/tvMessageContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tvMessageMarginTopText"
+            android:autofillHints=""
+            android:hint="@string/tvMessageHintText"
+            android:minHeight="@dimen/tvMessageMinHeightText"
+            android:text="@{message.content}"
+            android:textColorHint="@color/tvMessageColorHintText" />
+
+        <TextView
+            android:id="@+id/tvMessageFinal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginTop="@dimen/tvMessageMarginTopFinal"
+            android:autofillHints=""
+            android:hint="@string/tvMessageHintFinal"
+            android:minHeight="@dimen/tvMessageMinHeightFinal"
+            android:text="@string/tvMessageTextFinal"
+            android:textColorHint="@color/tvMessageColorHintFinal"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imgMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/message"
+            android:contentDescription="@string/imgMessage" />
+
+    </LinearLayout>
+</layout>
