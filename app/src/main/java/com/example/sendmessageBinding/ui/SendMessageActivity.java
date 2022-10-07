@@ -1,14 +1,18 @@
 package com.example.sendmessageBinding.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.sendmessageBinding.R;
@@ -59,6 +63,18 @@ public class SendMessageActivity extends AppCompatActivity {
         Log.d(TAG, "SendMessageActivity -> onCreate()");
     }
 
+    /**
+     * Metodo callback que Crea el menu de opciones en la vista, se devuelve true prara indicar al SO
+     * que se ha realizado la opcion de modificar el menú.
+     * @param menu
+     * @return
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
     public void sendMessage() {
         //TODO se modificará este ejercicio para estudiar viewBinding
         //Toast.makeText(this, "Hemos pulsado el boton", Toast.LENGTH_SHORT).show();
@@ -100,6 +116,24 @@ public class SendMessageActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "SendMessageActivity -> onPause()");
+    }
+
+    /**
+     * Este metodo callback se llama cuando se pulsa sobre una de las opciones del menu
+     * de la aplicacion
+     * @param item
+     * @return
+     */
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.action_aboutus:
+            //Toast.makeText(this, "se ha pulsado sobre aboutUs", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, AboutUsActivity.class);
+                startActivity(intent);
+            break;
+        }
+        return true;
     }
 
     /**

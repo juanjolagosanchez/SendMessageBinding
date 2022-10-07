@@ -6,7 +6,7 @@
     <string name="etUserHint">Introduce tu nombre</string>
     <string name="tvUserHint">El usuario</string>
     <string name="tvMessageHint"></string>
-    <string name="tvMessageText" >Ha escrito el mensaje</string>
+    <string name="tvMessageText">Ha escrito el mensaje</string>
     <string name="tvMessageHintText"></string>
     <string name="tvMessageTextText" />
     <string name="tvMessageHintFinal" />
