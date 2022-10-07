@@ -13,6 +13,7 @@
     <string name="tvMessageTextFinal" />
     <string name="imgMessage">Imagen contiene dos mensajes</string>
     <string name="aboutUs">Sobre nosotros</string>
+    <string name="aboutUsName">Sobre nosotros</string>
 
 
 </resources>
